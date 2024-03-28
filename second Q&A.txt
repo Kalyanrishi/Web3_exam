@@ -1,0 +1,30 @@
+2) Demonstrate how to read data from the Smart Contract with the
+help of Web3.js?
+Ans) Before reading the data we need to connect to an Ethereum node with JSON RPC on the mainnet, we need to follow following steps:
+  *First , we need to file up the node console in our terminal like this 
+node
+* Now we have node console open ,inside the node we need to require web3.js like this
+const Web3 = require('web3');
+* Now we have got access to a variable whre we can create new Web3 connection.
+* Before we need generate and assign Infura URL to a variable like this
+ const rpcURL = "https://mainnet.infura.io/v3/d46c95ccd93f4b048af46a7299f74fe5"
+*Make sure that it is  from Infura API KEY.
+* Now we can instantiate a Web3 connection by this command
+const web3 = new Web3(rpcURL);
+* Now we have live connetion with Ethereum mainnet.
+In order to read the data from smart contract we have to follow the steps as
+* A Javascript representation of the smart contract we want to interact with.
+* A way to call the function on the smart contract when readin the data.
+We get Javascript representation with "web3.eth.Contract()" function.
+ This function has two aspects such as
+*Smart contract ABI -Abstract Binary Interface
+* JSON array that describes how a specific smart contracts works
+ex: 
+    const abi=
+To read address we use command as 
+ const address = "0xb00E930de76C9BDfDF15c67F76fE8da3cc4b5C61";
+To read smart contracts we use commad as
+ const contract = new web3.eth.Contract(abi,address);
+To find total supply we use
+ contract.methods.name().call((err,result) => {console.log(result)});
+

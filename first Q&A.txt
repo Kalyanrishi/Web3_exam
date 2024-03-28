@@ -1,0 +1,12 @@
+1) Write the differences between Web3.js and Ether.js?
+Ans) Web3.ja and Ether.js are both Ethereum Javascript libraries.
+  Web3.js:
+           It is developed and maintained by the Ethereum foudation.
+One of the major difference between web3.js and ether.js is how they handle key management and interaction with the Ethereum Blockchain.
+  Web3.js assumes that there is a local node connected to application. It assumed that node to store keys,sign tractions and reads and interacts with the 
+   Ethereum blockchain.
+ Ether.js:
+          It is developed and maintained by Rick Moore-A Developer.
+ In Ether.js seperates the node into two seperate roles.
+* A wallet that holds keys and signs transactions
+* A provider that serves as an anonymous connection to the Ethereum network, checking state and sending transactions.
